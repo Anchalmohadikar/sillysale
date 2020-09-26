@@ -17,7 +17,7 @@ recents(String imgPath, String name, String price, String stock, String rating,
                 borderRadius: BorderRadius.circular(20.0),
                 // color: Colors.black,
                 image: DecorationImage(
-                  image: AssetImage(imgPath),
+                  image: NetworkImage(imgPath),
                   fit: BoxFit.cover,
                 ),
               ),
