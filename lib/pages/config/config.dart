@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:sillysale/pages/home/home.dart';
+import 'package:sillysale/provider/provider.dart';
 
 class ConfigApp extends StatefulWidget {
   @override
@@ -9,13 +11,16 @@ class ConfigApp extends StatefulWidget {
 class _ConfigAppState extends State<ConfigApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "SillySale",
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return MultiProvider(
+      providers: Providers.providers(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: "SillySale",
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: HomePage(),
       ),
-      home: HomePage(),
     );
   }
 }
