@@ -43,8 +43,8 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xFF5032B6),
-                    Color(0xFFB765D3),
+                    Color(0xFFde6262),
+                    Color(0xFFffb88c),
                   ], // Bloody Mary
                   tileMode: TileMode.clamp,
                   begin: Alignment.topLeft,
@@ -66,8 +66,8 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xffd9a7c7),
-                    Color(0xfffffcdc),
+                    Color(0xFF06beb6),
+                    Color(0xFF48b1bf),
                   ],
                   tileMode: TileMode.clamp,
                   begin: Alignment.topLeft,
@@ -89,8 +89,8 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xFF5032B6),
-                    Color(0xFFB765D3),
+                    Color(0xFF009FFF),
+                    Color(0xFFec2F4B),
                   ],
                   tileMode: TileMode.clamp,
                   begin: Alignment.topLeft,
@@ -112,8 +112,8 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xffd9a7c7),
-                    Color(0xfffffcdc),
+                    Color(0xFFff9966),
+                    Color(0xFFff5e62),
                   ],
                   tileMode: TileMode.clamp,
                   begin: Alignment.topLeft,
@@ -135,8 +135,8 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xFF5032B6),
-                    Color(0xFFB765D3),
+                    Color(0xFF283c86),
+                    Color(0xFF45a247),
                   ],
                   tileMode: TileMode.clamp,
                   begin: Alignment.topLeft,
@@ -158,8 +158,8 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xffad5389),
-                    Color(0xff3c1053),
+                    Color(0xED2B33FF),
+                    Color(0xD85A7FFF),
                   ],
                   tileMode: TileMode.clamp,
                   begin: Alignment.topLeft,
@@ -181,8 +181,8 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xFF5032B6),
-                    Color(0xFFB765D3),
+                    Color(0xFFeb3349),
+                    Color(0xFFf45c43),
                   ],
                   tileMode: TileMode.clamp,
                   begin: Alignment.topLeft,
@@ -204,8 +204,8 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xFF5032B6),
-                    Color(0xFFB765D3),
+                    Color(0xFFEF3B36),
+                    Color(0xEEA47FFF),
                   ],
                   tileMode: TileMode.clamp,
                   begin: Alignment.topLeft,
@@ -227,8 +227,8 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xFF5032B6),
-                    Color(0xFFB765D3),
+                    Color(0xFF2b5876),
+                    Color(0xFF4e4376),
                   ],
                   tileMode: TileMode.clamp,
                   begin: Alignment.topLeft,
@@ -250,8 +250,8 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xffad5389),
-                    Color(0xff3c1053),
+                    Color(0xFFc0392b),
+                    Color(0xFF8e44ad),
                   ],
                   tileMode: TileMode.clamp,
                   begin: Alignment.topLeft,
@@ -273,8 +273,8 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xFF5032B6),
-                    Color(0xFFB765D3),
+                    Color(0xFF159957),
+                    Color(0xFF155799),
                   ],
                   tileMode: TileMode.clamp,
                   begin: Alignment.topLeft,
@@ -334,8 +334,8 @@ class _HomePageState extends State<HomePage> {
                             decoration: BoxDecoration(
                               gradient: LinearGradient(
                                 colors: [
-                                  Color(0xFF5032B6),
-                                  Color(0xFFB765D3),
+                                  Color(0xFF4568dc),
+                                  Color(0xFFb06ab3),
                                 ],
                                 tileMode: TileMode.clamp,
                                 begin: Alignment.topLeft,
