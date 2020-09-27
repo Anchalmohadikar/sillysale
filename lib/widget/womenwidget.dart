@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sillysale/pages/details/showdetails.dart';
 
-baby(String imgPath, String name, String price, String stock, String rating,
+women(String imgPath, String name, String price, String stock, String rating,
     String weight, BuildContext context) {
   return Padding(
     padding: EdgeInsets.only(top: 20, left: 10),
@@ -13,28 +13,24 @@ baby(String imgPath, String name, String price, String stock, String rating,
           children: [
             Container(
               height: 200,
-              width: 180.0,
-              // width: MediaQuery.of(context).size.width,
+              width: 130,
               child: InkWell(
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => ShowDetails(
-                      file: imgPath,
-                      name: name,
-                      price: price,
-                      sku: stock,
-                      visibility: rating,
-                      weight: weight,
-                    ),
-                  ),
-                ),
+                          file: imgPath,
+                          name: name,
+                          price: price,
+                          sku: stock,
+                          visibility: rating,
+                          weight: weight,
+                        ))),
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20.0),
                 // color: Colors.black,
                 image: DecorationImage(
-                  image: NetworkImage(imgPath),
-                  fit: BoxFit.contain,
+                  image: AssetImage(imgPath),
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
@@ -45,30 +41,25 @@ baby(String imgPath, String name, String price, String stock, String rating,
                 style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
-                  fontSize: 14.0,
                 ),
-                overflow: TextOverflow.ellipsis,
               ),
             ),
             Text(
               price,
               style: TextStyle(
-                color: Colors.grey[800],
-                fontSize: 12.0,
+                color: Colors.grey,
               ),
             ),
             Text(
               stock,
               style: TextStyle(
-                color: Colors.green,
-                fontSize: 12.0,
+                color: Colors.lightGreen,
               ),
             ),
             Text(
               rating,
               style: TextStyle(
-                color: Colors.grey[800],
-                fontSize: 12.0,
+                color: Colors.grey,
               ),
             ),
           ],
