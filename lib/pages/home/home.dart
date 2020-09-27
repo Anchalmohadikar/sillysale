@@ -6,6 +6,7 @@ import 'package:sillysale/constants/fzstore.dart';
 import 'package:sillysale/provider/products.dart';
 import 'package:sillysale/widget/babywidget.dart';
 import 'package:http/http.dart' as http;
+import 'package:sillysale/widget/womenwidget.dart';
 // import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
@@ -378,7 +379,7 @@ class _HomePageState extends State<HomePage> {
                           scrollDirection: Axis.horizontal,
                           children: List.generate(
                             products.getSillyProducts().length,
-                            (index) => recents(
+                            (index) => baby(
                               FZStore.productsimgurl +
                                   products
                                       .getSillyProducts()[index]
@@ -402,6 +403,123 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
+                ),
+                SizedBox(height: 10.0),
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Baby Items",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                          decoration: TextDecoration.none,
+                        ),
+                      ),
+                      Container(
+                        height: 20.0,
+                        padding: EdgeInsets.only(right: 5),
+                        child: RaisedButton(
+                          onPressed: () {},
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(
+                              20.0,
+                            ),
+                          ),
+                          padding: EdgeInsets.all(
+                            0.0,
+                          ),
+                          child: Ink(
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [
+                                  Color(0xFF5032B6),
+                                  Color(0xFFB765D3),
+                                ],
+                                tileMode: TileMode.clamp,
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                stops: [0.0, 1.0],
+                              ),
+                              borderRadius: BorderRadius.circular(
+                                20.0,
+                              ),
+                            ),
+                            child: Container(
+                              constraints: BoxConstraints(
+                                maxWidth: 100.0,
+                              ),
+                              alignment: Alignment.center,
+                              child: Text(
+                                "View More",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 13.0,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 300,
+                  width: MediaQuery.of(context).size.width,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      women(
+                        "assets/images/girl1.jpg",
+                        "Black & White Combo",
+                        "\$35.00",
+                        "In Stock",
+                        "Rating",
+                        "weight",
+                        context,
+                      ),
+                      women(
+                        "assets/images/girl2.jpg",
+                        "Black & White Combo",
+                        "\$35.00",
+                        "In Stock",
+                        "Rating",
+                        "weight",
+                        context,
+                      ),
+                      women(
+                        "assets/images/girl3.jpg",
+                        "Black & White Combo",
+                        "\$35.00",
+                        "In Stock",
+                        "Rating",
+                        "weight",
+                        context,
+                      ),
+                      women(
+                        "assets/images/girl4.jpg",
+                        "Black & White Combo",
+                        "\$35.00",
+                        "In Stock",
+                        "Rating",
+                        "weight",
+                        context,
+                      ),
+                      women(
+                        "assets/images/girl1.jpg",
+                        "Black & White Combo",
+                        "\$35.00",
+                        "In Stock",
+                        "Rating",
+                        "weight",
+                        context,
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
