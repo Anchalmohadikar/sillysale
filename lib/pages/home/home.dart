@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -5,7 +6,8 @@ import 'package:provider/provider.dart';
 import 'package:sillysale/constants/fzstore.dart';
 import 'package:sillysale/provider/products.dart';
 import 'package:sillysale/widget/babywidget.dart';
-import 'package:http/http.dart' as http;
+import 'package:sillysale/widget/carouselwidget.dart';
+// import 'package:simple_slider/simple_slider.dart';
 import 'package:sillysale/widget/womenwidget.dart';
 // import 'package:provider/provider.dart';
 
@@ -17,6 +19,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   var babyitem = "Baby Items";
 
+  final _imageUrls = [
+    "https://png.pngtree.com/thumb_back/fw800/back_pic/00/03/35/09561e11143119b.jpg",
+    "https://png.pngtree.com/thumb_back/fw800/back_pic/04/61/87/28586f2eec77c26.jpg",
+    "https://png.pngtree.com/thumb_back/fh260/back_pic/04/29/70/37583fdf6f4050d.jpg",
+    "https://ak6.picdn.net/shutterstock/videos/6982306/thumb/1.jpg"
+  ];
   @override
   void initState() {
     Provider.of<Products>(context, listen: false).fetchData();
@@ -304,7 +312,37 @@ class _HomePageState extends State<HomePage> {
           SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: 60.0),
+                SizedBox(height: 80.0),
+                CarouselSlider(
+                  options: CarouselOptions(
+                    height: 200.0,
+                    autoPlay: true,
+                    // enlargeCenterPage: true,
+                    autoPlayCurve: Curves.fastOutSlowIn,
+                    enableInfiniteScroll: true,
+                    autoPlayAnimationDuration: Duration(milliseconds: 800),
+                    // viewportFraction: 0.8,
+                  ),
+                  items: [
+                    carousel(
+                      "https://png.pngtree.com/thumb_back/fw800/back_pic/00/03/35/09561e11143119b.jpg",
+                      context,
+                    ),
+                    carousel(
+                      "https://png.pngtree.com/thumb_back/fw800/back_pic/04/61/87/28586f2eec77c26.jpg",
+                      context,
+                    ),
+                    carousel(
+                      "https://png.pngtree.com/thumb_back/fh260/back_pic/04/29/70/37583fdf6f4050d.jpg",
+                      context,
+                    ),
+                    carousel(
+                      "https://ak6.picdn.net/shutterstock/videos/6982306/thumb/1.jpg",
+                      context,
+                    ),
+                  ],
+                ),
+                SizedBox(height: 10.0),
                 Padding(
                   padding: EdgeInsets.all(10.0),
                   child: Row(
@@ -313,7 +351,7 @@ class _HomePageState extends State<HomePage> {
                       Text(
                         "Baby Items",
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 20.0,
                           decoration: TextDecoration.none,
                         ),
@@ -413,7 +451,7 @@ class _HomePageState extends State<HomePage> {
                       Text(
                         "Baby Items",
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: 20.0,
                           decoration: TextDecoration.none,
                         ),

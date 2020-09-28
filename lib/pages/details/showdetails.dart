@@ -138,6 +138,7 @@ class _ShowDetailsState extends State<ShowDetails> {
                         bottomLeft: Radius.circular(20.0),
                         bottomRight: Radius.circular(20.0),
                       ),
+                      color: Colors.white,
                     ),
                   ),
                 ),
@@ -151,7 +152,7 @@ class _ShowDetailsState extends State<ShowDetails> {
                         Text(
                           widget.name,
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                           ),
@@ -220,22 +221,36 @@ class _ShowDetailsState extends State<ShowDetails> {
                             //     ),
                             //   ),
                             // ),
-                            MaterialButton(
-                              color: Colors.grey[200],
-                              height: 50.0,
-                              elevation: 0.0,
-                              minWidth: 150.0,
-                              onPressed: () {},
-                              child: Text(
-                                "ADD TO CART",
-                                style: TextStyle(
-                                  color: Colors.grey[800],
+                            InkWell(
+                              onTap: () {},
+                              splashColor: Colors.grey,
+                              child: Container(
+                                height: 50.0,
+                                width: 150.0,
+                                child: Center(
+                                  child: Text(
+                                    "ADD TO CART",
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 18.0,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                                decoration: BoxDecoration(
+                                  color: Colors.black.withOpacity(0.6),
+                                  borderRadius: BorderRadius.circular(10.0),
                                 ),
                               ),
                             ),
                             DropdownButton(
                               items: listDrop,
-                              hint: Text("Q"),
+                              hint: Text(
+                                "Q",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              ),
                               onChanged: null,
                               value: selected,
                             ),
