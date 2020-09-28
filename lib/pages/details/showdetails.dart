@@ -74,27 +74,6 @@ class _ShowDetailsState extends State<ShowDetails> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
-          onPressed: () => Navigator.of(context).pop(),
-          color: Colors.grey,
-        ),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.favorite_border),
-            onPressed: () {},
-            color: Colors.grey,
-          ),
-          IconButton(
-            icon: Icon(Icons.more_vert),
-            onPressed: () {},
-            color: Colors.grey,
-          ),
-        ],
-      ),
       body: Stack(
         children: [
           Container(
@@ -124,6 +103,7 @@ class _ShowDetailsState extends State<ShowDetails> {
           SingleChildScrollView(
             child: Column(
               children: [
+                SizedBox(height: 80.0),
                 Padding(
                   padding: EdgeInsets.only(left: 20.0, right: 20.0),
                   child: Container(
@@ -134,10 +114,7 @@ class _ShowDetailsState extends State<ShowDetails> {
                         image: NetworkImage(widget.file),
                         fit: BoxFit.contain,
                       ),
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(20.0),
-                        bottomRight: Radius.circular(20.0),
-                      ),
+                      borderRadius: BorderRadius.circular(20.0),
                       color: Colors.white,
                     ),
                   ),
@@ -271,6 +248,36 @@ class _ShowDetailsState extends State<ShowDetails> {
               ],
             ),
           ),
+          Align(
+            alignment: Alignment.topCenter,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                AppBar(
+                  backgroundColor: Colors.transparent,
+                  elevation: 0.0,
+                  leading: IconButton(
+                    icon: Icon(Icons.arrow_back_ios),
+                    onPressed: () => Navigator.of(context).pop(),
+                    color: Colors.grey,
+                  ),
+                  actions: [
+                    IconButton(
+                      icon: Icon(Icons.favorite_border),
+                      onPressed: () {},
+                      color: Colors.grey,
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.more_vert),
+                      onPressed: () {},
+                      color: Colors.grey,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );

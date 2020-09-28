@@ -19,12 +19,6 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   var babyitem = "Baby Items";
 
-  final _imageUrls = [
-    "https://png.pngtree.com/thumb_back/fw800/back_pic/00/03/35/09561e11143119b.jpg",
-    "https://png.pngtree.com/thumb_back/fw800/back_pic/04/61/87/28586f2eec77c26.jpg",
-    "https://png.pngtree.com/thumb_back/fh260/back_pic/04/29/70/37583fdf6f4050d.jpg",
-    "https://ak6.picdn.net/shutterstock/videos/6982306/thumb/1.jpg"
-  ];
   @override
   void initState() {
     Provider.of<Products>(context, listen: false).fetchData();
@@ -325,19 +319,19 @@ class _HomePageState extends State<HomePage> {
                   ),
                   items: [
                     carousel(
-                      "https://png.pngtree.com/thumb_back/fw800/back_pic/00/03/35/09561e11143119b.jpg",
+                      "assets/images/carousel1.jpg",
                       context,
                     ),
                     carousel(
-                      "https://png.pngtree.com/thumb_back/fw800/back_pic/04/61/87/28586f2eec77c26.jpg",
+                      "assets/images/carousel2.jpg",
                       context,
                     ),
                     carousel(
-                      "https://png.pngtree.com/thumb_back/fh260/back_pic/04/29/70/37583fdf6f4050d.jpg",
+                      "assets/images/carousel3.jpg",
                       context,
                     ),
                     carousel(
-                      "https://ak6.picdn.net/shutterstock/videos/6982306/thumb/1.jpg",
+                      "assets/images/carousel4.jpg",
                       context,
                     ),
                   ],

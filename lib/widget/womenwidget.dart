@@ -30,7 +30,7 @@ women(String imgPath, String name, String price, String stock, String rating,
                 // color: Colors.black,
                 image: DecorationImage(
                   image: AssetImage(imgPath),
-                  fit: BoxFit.cover,
+                  fit: BoxFit.contain,
                 ),
               ),
             ),
